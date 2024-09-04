@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fef2f2; /* Light pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.countdown-container {
+    text-align: center;
+    background: #fff; /* White background for the container */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 90%;
+    width: 500px;
+}
+
+h1 {
+    color: #e76f6f; /* Soft red color */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.love-icon {
+    margin-bottom: 20px;
+}
+
+.love-icon i {
+    font-size: 100px; /* Adjust size as needed */
+    color: #e76f6f; /* Soft red color */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.love-icon i:hover {
+    color: #d9534f; /* Darker red on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+#countdown {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center;
+    gap: 10px;
+}
+
+.countdown-item {
+    background: #ffe6e6; /* Light pink */
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 120px; /* Allow items to grow and shrink */
+    text-align: center;
+}
+
+#countdown span {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #e76f6f; /* Soft red color */
+}
+
+#countdown p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #d3a4a4; /* Light red color */
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #e76f6f;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .countdown-container {
+        padding: 15px;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .love-icon i {
+        font-size: 80px; /* Adjust size for smaller screens */
+    }
+
+    #countdown span {
+        font-size: 1.8em;
+    }
+
+    #countdown p {
+        font-size: 0.8em;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+}
