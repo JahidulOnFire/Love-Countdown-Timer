@@ -1,11 +1,19 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #fef2f2; /* Light pink background */
+    color: #333; /* Default text color */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    position: relative; /* Needed for absolute positioning of the button */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #333; /* Dark background */
+    color: #fef2f2; /* Light text color */
 }
 
 .countdown-container {
@@ -16,6 +24,12 @@ body {
     padding: 20px;
     max-width: 90%;
     width: 500px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.dark-mode .countdown-container {
+    background: #444; /* Darker background for the container */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Light shadow */
 }
 
 h1 {
@@ -55,6 +69,13 @@ h1 {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     flex: 1 1 120px; /* Allow items to grow and shrink */
     text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode .countdown-item {
+    background: #555; /* Darker background */
+    border-color: #666; /* Slightly lighter border */
+    color: #fef2f2; /* Light text color */
 }
 
 #countdown span {
@@ -64,10 +85,18 @@ h1 {
     color: #e76f6f; /* Soft red color */
 }
 
+.dark-mode #countdown span {
+    color: #fef2f2; /* Light text color */
+}
+
 #countdown p {
     margin: 0;
     font-size: 0.9em;
     color: #d3a4a4; /* Light red color */
+}
+
+.dark-mode #countdown p {
+    color: #ccc; /* Light gray color */
 }
 
 footer {
@@ -76,8 +105,34 @@ footer {
     color: #e76f6f;
 }
 
+.dark-mode footer {
+    color: #fef2f2; /* Light text color */
+}
+
 footer p {
     margin: 0;
+}
+
+#dark-mode-toggle {
+    position: absolute; /* Absolute positioning to place it at the top-right corner */
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%; /* Make it circular */
+    background-color: #e76f6f; /* Button background color */
+    color: #fff;
+    font-size: 1.5em; /* Adjust size of the icon */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode #dark-mode-toggle {
+    background-color: #555; /* Darker background for dark mode */
+}
+
+#dark-mode-toggle:hover {
+    background-color: #d9534f; /* Darker button color on hover */
 }
 
 @media (max-width: 600px) {
